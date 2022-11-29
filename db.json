@@ -1,0 +1,88 @@
+{
+  "servers": [
+    {
+      "name": "E2OPEN ONE COST (32220)",
+      "target": "ausdlcost2bd01.us.bell.com",
+      "prod": true,
+      "db": "Percona MongoDB",
+      "policy": {
+        "name": "CheckLogPath",
+        "priority": "P1",
+        "actions": [
+          "Service Restart"
+        ]
+      },
+      "compliance": {
+        "state": "FAIL",
+        "reason": "Aging: 10 days",
+        "actions": [
+          "Exception Requested"
+        ]
+      },
+      "evaluation": "/m01/app/persona/product/mongodb/log/gii_sit1_rs/db.log",
+      "expectation": "=~'/m01/app/persona/product/mongodb/log/gii_sit1_rs/db.log",
+      "date": "2022-09-19 23:36:33"
+    }, {
+      "name": "E2OPEN ONE COST (32220)",
+      "target": "ausdlcost2bd01.us.bell.com",
+      "prod": false,
+      "db": "Percona MongoDB",
+      "policy": {
+        "name": "CheckLogRotateDeploy",
+        "priority": "P1",
+        "actions": [
+          "Service Restart"
+        ]
+      },
+      "compliance": {
+        "state": "FAIL",
+        "reason": "Aging: 10 days",
+        "actions": []
+      },
+      "evaluation": "False",
+      "expectation": "True",
+      "date": "2022-09-19 23:36:33"
+    }, {
+      "name": "ORDER STATUS API (32220)",
+      "target": "oasilcost2bd01.us.bell.com",
+      "prod": true,
+      "db": "Percona MongoDB",
+      "policy": {
+        "name": "CheckMultiplePVSCSI",
+        "priority": "",
+        "actions": [
+          "Service Restart"
+        ]
+      },
+      "compliance": {
+        "state": "PASS",
+        "reason": "",
+        "actions": []
+      },
+      "evaluation": "1",
+      "expectation": ">1",
+      "date": "2022-09-19 23:36:33"
+    }, {
+      "name": "QUICKSHARE",
+      "target": "qshpost2bd01.us.bell.com",
+      "prod": false,
+      "db": "Percona MongoDB",
+      "policy": {
+        "name": "CheckM02Partition",
+        "priority": "",
+        "actions": [
+        "Performance",
+        "Server Reboot"
+      ]
+      },
+      "compliance": {
+        "state": "PASS",
+        "reason": "",
+        "actions": []
+      },
+      "evaluation": "1",
+      "expectation": ">1",
+      "date": "2022-09-19 23:36:33"
+    }
+  ]
+}
