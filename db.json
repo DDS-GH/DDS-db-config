@@ -11,7 +11,7 @@
       "policy": {
         "name": "CheckLogPath",
         "priority": "P1",
-        "actions": [
+        "tags": [
           "Service Restart"
         ]
       },
@@ -25,7 +25,8 @@
       "evaluation": "/m01/app/persona/product/mongodb/log/gii_sit1_rs/db.log",
       "expectation": "=~'/m01/app/persona/product/mongodb/log/gii_sit1_rs/db.log",
       "date": "2022-09-19 23:36:33"
-    }, {
+    },
+    {
       "name": "E2OPEN ONE COST (32220)",
       "details": "It's 3am, time to create some chaos . Stares at human while pushing stuff off a table playing with balls of wool so eat half my food and ask for more or cats woo attack dog, run away and pretend to be victim but the fat cat sat on the mat bat away with paws for lick the curtain just to be annoying.",
       "target": {
@@ -36,61 +37,69 @@
       "policy": {
         "name": "CheckLogRotateDeploy",
         "priority": "P1",
-        "actions": [
+        "tags": [
           "Service Restart"
         ]
       },
       "compliance": {
         "state": "FAIL",
         "reason": "Aging: 10 days",
-        "actions": []
+        "actions": [
+
+        ]
       },
       "evaluation": "False",
       "expectation": "True",
       "date": "2022-09-19 23:36:33"
-    }, {
+    },
+    {
       "name": "ORDER STATUS API (32220)",
       "details": "Good morning sunshine annoy kitten brother with poking sleep so whenever a door is opened, rush in before the human. Making bread on the bathrobe murder hooman toes but relentlessly pursues moth.",
       "target": {
         "name": "oasilcost2bd01.us.bell.com",
-      "prod": true,
-      "db": "Percona MongoDB"
+        "prod": true,
+        "db": "Percona MongoDB"
       },
       "policy": {
         "name": "CheckMultiplePVSCSI",
         "priority": "",
-        "actions": [
+        "tags": [
           "Service Restart"
         ]
       },
       "compliance": {
         "state": "PASS",
         "reason": "",
-        "actions": []
+        "actions": [
+
+        ]
       },
       "evaluation": "1",
       "expectation": ">1",
       "date": "2022-09-19 23:36:33"
-    }, {
+    },
+    {
       "name": "QUICKSHARE",
       "details": "And sometimes switches in french and say miaou just because well why not bite off human's toes make muffins, yet do not try to mix old food with new one to fool me!",
       "target": {
         "name": "qshpost2bd01.us.bell.com",
-      "prod": false,
-      "db": "Percona MongoDB"
+        "prod": false,
+        "db": "Percona MongoDB"
       },
       "policy": {
         "name": "CheckM02Partition",
         "priority": "",
-        "actions": [
-        "Performance",
-        "Server Reboot"
-      ]
+        "tags": [
+          "Performance",
+          "Server Reboot"
+        ]
       },
       "compliance": {
         "state": "PASS",
         "reason": "",
-        "actions": []
+        "actions": [
+
+        ]
       },
       "evaluation": "1",
       "expectation": ">1",
